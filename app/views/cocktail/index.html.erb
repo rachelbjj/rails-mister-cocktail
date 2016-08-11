@@ -1,0 +1,6 @@
+<h1>VOTRE LISTE DE COCKTAILS</h1>
+<% @cocktails.each do |cocktail| %>
+<p> <%link_to "#{cocktail.name}", cocktail_path(cocktail) %> </p>
+<p> <%link_to "Delete this cocktail", cocktail_path(cocktail, method: :destroy) %> </p>
+<%end%>
+<p><% link_to "Add a new cocktail", new_cocktail_path %> </p>

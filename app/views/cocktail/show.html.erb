@@ -1,0 +1,9 @@
+<h1>@cocktail.name.capitalize :</h1>
+<h2> INGREDIENTS : </h2>
+<@cocktail.doses.each do |dose|>
+<ul><li>
+<%= dose.ingredient.name%> : <%= dose.description %>
+<% link_to "Delete this dose", cocktail_dose_path(dose) %>
+</li></ul>
+<% link_to "Add a dose", cocktail_dose_index_path(@cocktail) %>
+<% end %>
